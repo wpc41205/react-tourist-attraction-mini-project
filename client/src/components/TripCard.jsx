@@ -19,7 +19,7 @@ function TripCard({ trip, onTagClick }) {
         <img
           src={trip.photos[0]}
           alt={trip.title}
-          className="w-full lg:w-[500px] h-[200px] md:h-[300px] lg:h-[350px] object-cover rounded-[20px] md:rounded-[30px] lg:rounded-[50px] lg:mr-5 mb-4 lg:mb-0"
+          className="w-full md:w-[300px] lg:w-[500px] lg:h-[350px] md:h-[300px] object-cover rounded-[20px] md:rounded-[30px] lg:rounded-[50px] lg:mr-5 mb-4 lg:mb-0" 
         />
         
         <div className="flex flex-col text-base md:text-lg text-start items-start">
