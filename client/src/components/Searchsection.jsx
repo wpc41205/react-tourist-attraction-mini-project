@@ -37,7 +37,7 @@ function Searchsection({ onSearch, addSearchTerm }) {
   };
 
   return (
-    <div className="flex justify-center items-center h-16 w-[60vw] mx-auto">
+    <div className="flex justify-center items-center h-16 w-[90vw] md:w-[80vw] lg:w-[60vw] mx-auto px-4">
       <form onSubmit={handleSubmit} className="w-full">
         <div className="relative">
           <input
@@ -45,15 +45,15 @@ function Searchsection({ onSearch, addSearchTerm }) {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             onKeyPress={handleKeyPress}
-            className="text-center text-2xl mt-4 p-2 border-0  rounded-none w-full h-12 border-b-2 border-black focus:outline-none focus:border-blue-500"
+            className="text-center text-lg md:text-xl lg:text-2xl mt-4 p-2 border-0 rounded-none w-full h-10 md:h-12 border-b-2 border-black focus:outline-none focus:border-blue-500"
             placeholder="หาที่เที่ยวแล้วไปกันเลย ..."
           />
           <button
             type="submit"
-            className="absolute right-2 top-6 text-gray-500 hover:text-blue-600 transition-colors duration-200"
+            className="absolute right-2 top-4 md:top-6 text-gray-500 hover:text-blue-600 transition-colors duration-200"
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5 md:w-6 md:h-6"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

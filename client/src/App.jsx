@@ -40,7 +40,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen px-2 md:px-4">
       <Header />
       <Navigation />
       <Searchsection onSearch={searchTrips} addSearchTerm={addSearchTerm} />
@@ -53,7 +53,6 @@ function App() {
           onTagClick={handleTagClick}
         />
       )}
-      
     </div>
   );
 }
