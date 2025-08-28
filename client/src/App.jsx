@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import Navigation from "./components/Navigation";
 import Searchsection from "./components/Searchsection";
 import TripList from "./components/TripList";
 
@@ -10,6 +9,11 @@ function App() {
   const [error, setError] = useState(null);
   const [hasSearched, setHasSearched] = useState(false);
   const [addSearchTerm, setAddSearchTerm] = useState(null);
+
+  // Initial load - เรียก searchTrips("") ตอน mount
+  useEffect(() => {
+    searchTrips("");
+  }, []);
 
   const searchTrips = async (keywords) => {
     setLoading(true);
@@ -42,7 +46,6 @@ function App() {
   return (
     <div className="min-h-screen px-2 md:px-4">
       <Header />
-      <Navigation />
       <Searchsection onSearch={searchTrips} addSearchTerm={addSearchTerm} />
       
       {hasSearched && (
